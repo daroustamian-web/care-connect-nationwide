@@ -1,205 +1,203 @@
-# ElderCare San Diego - Premium Senior Care Landing Page
+# Care Connect Nationwide
 
-A beautiful, modern landing page for in-home senior care services in San Diego County. Built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
+> Programmatic SEO website for assisted living facilities across the United States
 
-## 🎨 Design Features
+## 🚀 One-Click Deploy
 
-- **Premium Purple Color Scheme**: Primary purple (#7C3AED), lavender (#EDE9FE), and cream (#F5F3F0)
-- **Responsive Design**: Mobile-first approach, fully responsive across all devices
-- **Smooth Animations**: Elegant scroll animations powered by Framer Motion
-- **Modern UI Components**: Cards, buttons, and forms with polished interactions
-- **Sticky Header**: Clean navigation that appears on scroll
-- **Contact Integration**: Phone, email, and location quick-access cards
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/daroustamian-web/care-connect-nationwide)
+
+---
+
+## 🌟 Features
+
+- **84 City Pages** - Pre-rendered static pages for major US metros
+- **SEO Optimized** - Unique meta tags, structured data, and sitemaps
+- **Dynamic Routing** - `/assisted-living/[state]/[city]`
+- **Mobile Responsive** - Beautiful design on all devices
+- **Fast Performance** - Static HTML with Next.js 14
+- **Auto Sitemap** - Generates on every build
+
+## 📊 Statistics
+
+- **Total Pages**: 89 (84 cities + 5 static)
+- **Total Facilities**: 5,600+
+- **States Covered**: 26
+- **Search Volume**: 50,000+ monthly searches targeted
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Development
 
-- Node.js 18+ and npm installed
-- Git installed
-
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd Chula-Vista
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Run the development server:
-```bash
+# Run development server
 npm run dev
+
+# Open http://localhost:3000
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+### Build
 
-## 📦 Tech Stack
+```bash
+# Build for production
+npm run build
 
-- **Framework**: Next.js 14.2.0 (App Router)
-- **Language**: TypeScript 5.3
-- **Styling**: Tailwind CSS 3.4
-- **Animations**: Framer Motion 11.0
-- **Icons**: Lucide React 0.344
-- **Images**: Next.js Image optimization with Unsplash integration
-
-## 📂 Project Structure
-
-```
-Chula-Vista/
-├── app/
-│   ├── layout.tsx         # Root layout with metadata
-│   ├── page.tsx           # Main landing page
-│   └── globals.css        # Global styles and Tailwind
-├── components/
-│   ├── Header.tsx         # Sticky navigation header
-│   ├── Hero.tsx           # Hero section with contact cards
-│   ├── ProblemSection.tsx # Problem awareness section
-│   ├── AgitateSection.tsx # Pain points section
-│   ├── SolutionSection.tsx # Solution presentation
-│   ├── ServicesSection.tsx # Services grid
-│   ├── HowItWorksSection.tsx # 4-step process
-│   ├── TestimonialsSection.tsx # Customer testimonials
-│   ├── BookingSection.tsx # Appointment booking
-│   ├── ContactForm.tsx    # Contact form with validation
-│   └── Footer.tsx         # Site footer
-├── types/
-│   └── index.ts           # TypeScript type definitions
-├── public/                # Static assets
-├── tailwind.config.ts     # Tailwind configuration
-├── tsconfig.json          # TypeScript configuration
-└── package.json           # Dependencies and scripts
+# Generates all 84 city pages + sitemap
+# Output: .next/ directory
 ```
 
-## 🎯 Key Sections
+### Deploy
 
-1. **Hero Section**: Eye-catching introduction with CTA and contact cards
-2. **Problem Section**: Addresses caregiver burnout and stress
-3. **Agitate Section**: Highlights the emotional and financial toll
-4. **Solution Section**: Presents the in-home care service as the answer
-5. **Services Section**: 6 service cards (Companion, Personal, Dementia, Respite, 24-Hour, Veterans)
-6. **How It Works**: 4-step onboarding process
-7. **Testimonials**: Social proof from San Diego families
-8. **Booking Section**: Multiple contact options
-9. **Contact Form**: Lead capture with validation
-10. **Footer**: Links, contact info, and social media
-
-## 🎨 Customization
-
-### Colors
-
-Edit the color palette in `tailwind.config.ts`:
-
-```typescript
-colors: {
-  primary: {
-    DEFAULT: '#7C3AED',  // Main purple
-    light: '#EDE9FE',    // Light lavender
-    dark: '#6D28D9',     // Dark purple
-  },
-  cream: '#F5F3F0',      // Background cream
-  beige: '#F5F3F0',      // Alternative background
-}
-```
-
-### Content
-
-All content is embedded in the components. To update:
-
-- **Contact Info**: Edit contact arrays in `Hero.tsx` and `BookingSection.tsx`
-- **Services**: Modify the services array in `ServicesSection.tsx`
-- **Testimonials**: Update testimonials array in `TestimonialsSection.tsx`
-- **Copy**: Edit text directly in each component file
-
-### Images
-
-Images are sourced from Unsplash. To change:
-
-1. Update the `src` prop in Image components
-2. Ensure new domains are added to `next.config.js`:
-
-```javascript
-images: {
-  domains: ['images.unsplash.com', 'your-domain.com'],
-}
-```
-
-## 🔧 Development
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
-
-### Form Handling
-
-The contact form includes:
-- Client-side validation
-- Error messages
-- Loading states
-- Success confirmation
-
-**Note**: Form currently simulates submission. To integrate with a backend:
-
-1. Replace the simulation in `ContactForm.tsx` with your API call:
-
-```typescript
-const response = await fetch('/api/contact', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(formData),
-})
-```
-
-2. Create an API route at `app/api/contact/route.ts`
-
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
-
-## ♿ Accessibility
-
-- Semantic HTML elements
-- ARIA labels on interactive elements
-- Keyboard navigation support
-- Alt text on all images
-- Color contrast compliance
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
+**Deploy to Vercel** (Recommended):
 1. Push to GitHub
-2. Import project in Vercel
+2. Import to Vercel
 3. Deploy automatically
 
-### Other Platforms
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
 
-```bash
-npm run build
-npm start
+## 🗂️ Project Structure
+
+```
+care-connect-nationwide/
+├── app/
+│   ├── assisted-living/[state]/[city]/page.tsx  # Dynamic city pages
+│   ├── sitemap.ts                                # Auto-generated sitemap
+│   ├── layout.tsx                                # Root layout
+│   └── page.tsx                                  # Homepage
+├── components/
+│   ├── city/                                     # City page components
+│   ├── Header.tsx
+│   └── Footer.tsx
+├── data/
+│   └── cities.json                               # 84 cities database
+├── lib/
+│   └── cityData.ts                               # Data utilities
+├── scripts/
+│   └── generate-sitemap.js                       # Sitemap generator
+└── public/
+    └── sitemap.xml                               # Generated sitemap
 ```
 
-Or use the `.next` directory with your preferred hosting platform.
+## 🎯 SEO Strategy
+
+Each city page targets:
+- "assisted living in [city]"
+- "senior living [city] [state]"
+- "assisted living facilities [city]"
+- "[city] assisted living cost"
+
+**Expected Results** (6 months):
+- 26,000-42,000 organic visits/month
+- 520-1,680 leads/month (2-4% conversion)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel (recommended)
+
+## 📈 Features by Page
+
+### City Pages (`/assisted-living/[state]/[city]`)
+- Hero section with city-specific data
+- Quick statistics dashboard
+- Facility listings with filters
+- Local area guide
+- Cost breakdown by care level
+- FAQ section with schema markup
+- Related cities recommendations
+- CTA section
+
+### Homepage (`/`)
+- Problem-Agitate-Solution flow
+- Services overview
+- How it works
+- Testimonials
+- Contact form
+
+## 🔧 Configuration
+
+### Update Branding
+Edit `template-config.json`:
+```json
+{
+  "site": {
+    "name": "Care Connect",
+    "domain": "careconnectinc.com"
+  },
+  "contact": {
+    "phone": "(800) 555-CARE",
+    "email": "info@careconnectinc.com"
+  }
+}
+```
+
+### Add More Cities
+Edit `data/cities.json` and add new city objects:
+```json
+{
+  "city": "Seattle",
+  "state": "Washington",
+  "stateAbbrev": "WA",
+  "slug": "seattle",
+  "population": 737015,
+  "seniorPopulation": 98000,
+  "avgCostLow": 5200,
+  "avgCostHigh": 7800,
+  "facilityCount": 86,
+  "county": "King County",
+  "description": "Seattle provides...",
+  "neighborhoods": ["Queen Anne", "Capitol Hill", ...]
+}
+```
+
+Rebuild to generate new pages.
+
+## 📝 Scripts
+
+```bash
+npm run dev            # Start development server
+npm run build          # Build for production
+npm run start          # Start production server
+npm run lint           # Run ESLint
+npm run generate-sitemap  # Regenerate sitemap manually
+```
+
+## 🌍 Cities Included
+
+**Top 10 Cities**:
+1. Phoenix, AZ - 89 facilities
+2. Chicago, IL - 156 facilities
+3. San Diego, CA - 124 facilities
+4. Los Angeles, CA - 245 facilities
+5. Dallas, TX - 142 facilities
+6. Houston, TX - 178 facilities
+7. Philadelphia, PA - 134 facilities
+8. San Antonio, TX - 112 facilities
+9. San Jose, CA - 98 facilities
+10. Austin, TX - 87 facilities
+
+**Plus 74 more cities** across 26 states!
+
+See [SITEMAP-SUMMARY.md](./SITEMAP-SUMMARY.md) for complete list.
 
 ## 📄 License
 
-Copyright © 2025 ElderCare San Diego. All rights reserved.
+Private - All rights reserved
 
 ## 🤝 Support
 
 For questions or support, contact:
-- Email: care@yoursite.com
-- Phone: (619) 555-0123
+- Email: info@careconnectinc.com
+- Phone: (800) 555-CARE
 
 ---
 
-Built with ❤️ for families in San Diego County
+**Built with ❤️ for Care Connect**
+
+*Helping families find the perfect assisted living community nationwide*
