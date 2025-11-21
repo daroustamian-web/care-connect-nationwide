@@ -1,0 +1,73 @@
+{
+  "site": {
+    "name": "Care Connect",
+    "tagline": "Find the Perfect Assisted Living Community Nationwide",
+    "domain": "careconnectinc.com",
+    "location": "Nationwide"
+  },
+  "contact": {
+    "phone": "(800) 555-CARE",
+    "email": "info@careconnectinc.com",
+    "address": "Serving Communities Nationwide"
+  },
+  "branding": {
+    "primaryColor": "#7C3AED",
+    "lightColor": "#EDE9FE",
+    "darkColor": "#6D28D9",
+    "creamColor": "#F5F3F0"
+  },
+  "seo": {
+    "title": "Care Connect | Find Assisted Living & Senior Care Nationwide",
+    "description": "Find the perfect assisted living community for your loved ones. Compare facilities, costs, and reviews across the United States. Free expert guidance.",
+    "keywords": ["assisted living", "senior care", "memory care", "senior living", "nursing homes", "retirement communities"]
+  },
+  "services": [
+    {
+      "name": "Companion Care",
+      "description": "Social interaction, meal preparation, light housekeeping, and more.",
+      "icon": "Heart"
+    },
+    {
+      "name": "Personal Care",
+      "description": "Assistance with bathing, dressing, grooming, and mobility.",
+      "icon": "User"
+    },
+    {
+      "name": "Dementia & Alzheimer's Care",
+      "description": "Specialized care for clients with memory loss.",
+      "icon": "Brain"
+    },
+    {
+      "name": "Respite Care",
+      "description": "Short-term relief for family caregivers.",
+      "icon": "Clock"
+    },
+    {
+      "name": "24-Hour Care",
+      "description": "Around-the-clock care for clients who need constant support.",
+      "icon": "Shield"
+    },
+    {
+      "name": "Veterans Care",
+      "description": "Specialized care for veterans with VA benefits assistance.",
+      "icon": "Star"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "I was at my wit's end before I found them. My mom has dementia and it was just too much for me to handle on my own. The caregiver they sent is a godsend.",
+      "author": "Sarah K.",
+      "location": "Chula Vista, CA"
+    },
+    {
+      "quote": "My dad is so stubborn and refused help from anyone. But the caregiver won him over. She's patient, kind, and he actually looks forward to her visits.",
+      "author": "David L.",
+      "location": "La Mesa, CA"
+    },
+    {
+      "quote": "The care coordinators really listened to our needs and found the perfect match for my mother. We couldn't be happier with the service.",
+      "author": "Maria G.",
+      "location": "National City, CA"
+    }
+  ]
+}
