@@ -37,8 +37,8 @@ function LeadForm({ cityData, variant, title }: LeadFormProps) {
 
   if (isSubmitted) {
     return (
-      <div className="bg-green-50 border-2 border-green-500 rounded-xl p-8 text-center">
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+      <div className="bg-green-50 border border-green-300 rounded-lg p-8 text-center">
+        <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
         <p className="text-gray-700 mb-4">
           We'll contact you within 2 hours with personalized recommendations for {cityData.city}.
@@ -51,10 +51,10 @@ function LeadForm({ cityData, variant, title }: LeadFormProps) {
   }
 
   const formClasses = variant === 'hero'
-    ? 'bg-white rounded-2xl shadow-2xl p-8'
+    ? 'bg-cream rounded-lg shadow-md p-8 border border-gray-200'
     : variant === 'sidebar'
-    ? 'bg-primary-light border-2 border-primary rounded-xl p-6 sticky top-24'
-    : 'bg-white rounded-xl shadow-lg p-6'
+    ? 'bg-cream border border-gray-200 rounded-lg p-6 sticky top-24'
+    : 'bg-cream rounded-lg shadow-sm p-6 border border-gray-200'
 
   return (
     <div className={formClasses}>
@@ -82,7 +82,7 @@ function LeadForm({ cityData, variant, title }: LeadFormProps) {
             required
             value={formData.name}
             onChange={(e) => setFormData({...formData, name: e.target.value})}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary focus:border-transparent"
             placeholder="John Smith"
           />
         </div>
@@ -96,7 +96,7 @@ function LeadForm({ cityData, variant, title }: LeadFormProps) {
             required
             value={formData.email}
             onChange={(e) => setFormData({...formData, email: e.target.value})}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary focus:border-transparent"
             placeholder="john@example.com"
           />
         </div>
@@ -110,7 +110,7 @@ function LeadForm({ cityData, variant, title }: LeadFormProps) {
             required
             value={formData.phone}
             onChange={(e) => setFormData({...formData, phone: e.target.value})}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary focus:border-transparent"
             placeholder="(555) 123-4567"
           />
         </div>
@@ -122,7 +122,7 @@ function LeadForm({ cityData, variant, title }: LeadFormProps) {
           <select
             value={formData.timeline}
             onChange={(e) => setFormData({...formData, timeline: e.target.value})}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary focus:border-transparent"
           >
             <option value="immediate">Immediately</option>
             <option value="1-3months">1-3 months</option>
@@ -138,7 +138,7 @@ function LeadForm({ cityData, variant, title }: LeadFormProps) {
           <select
             value={formData.careLevel}
             onChange={(e) => setFormData({...formData, careLevel: e.target.value})}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary focus:border-transparent"
           >
             <option value="independent">Independent Living</option>
             <option value="assisted-living">Assisted Living</option>
@@ -150,7 +150,7 @@ function LeadForm({ cityData, variant, title }: LeadFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-lg transition-colors disabled:opacity-50"
+          className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-full transition-colors disabled:opacity-50"
         >
           {isSubmitting ? 'Submitting...' : 'Get Free Consultation'}
         </button>
@@ -171,50 +171,50 @@ export default function PhoenixCityHero({ cityData }: PhoenixCityHeroProps) {
   return (
     <>
       {/* Hero Section with Lead Form */}
-      <section className="relative bg-gradient-to-br from-primary to-primary-dark text-white pt-32 pb-20 px-4">
+      <section className="relative bg-white pt-32 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
             <div>
-              <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                🏆 #1 Resource for Senior Living in Arizona
+              <div className="inline-block bg-blue-50 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                #1 Resource for Senior Living in Arizona
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
                 Assisted Living in Phoenix, Arizona
               </h1>
-              <p className="text-xl md:text-2xl text-primary-light mb-8">
+              <p className="text-xl md:text-2xl text-gray-700 mb-8">
                 Compare {cityData.facilityCount}+ communities, prices, and reviews. Free expert guidance for Phoenix families.
               </p>
 
               {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4">
-                  <div className="text-3xl font-bold mb-1">{cityData.facilityCount}</div>
-                  <div className="text-sm text-primary-light">Facilities</div>
+                <div className="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                  <div className="text-3xl font-bold text-primary mb-1">{cityData.facilityCount}</div>
+                  <div className="text-sm text-gray-600">Facilities</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4">
-                  <div className="text-3xl font-bold mb-1">${(cityData.avgCostLow/1000).toFixed(1)}k</div>
-                  <div className="text-sm text-primary-light">Avg Cost/Mo</div>
+                <div className="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                  <div className="text-3xl font-bold text-primary mb-1">${(cityData.avgCostLow/1000).toFixed(1)}k</div>
+                  <div className="text-sm text-gray-600">Avg Cost/Mo</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4">
-                  <div className="text-3xl font-bold mb-1">330+</div>
-                  <div className="text-sm text-primary-light">Sunny Days</div>
+                <div className="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                  <div className="text-3xl font-bold text-primary mb-1">330+</div>
+                  <div className="text-sm text-gray-600">Sunny Days</div>
                 </div>
               </div>
 
               {/* Trust Badges */}
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
-                  <Award className="w-5 h-5 mr-2" />
-                  <span className="text-sm font-semibold">BBB A+ Rated</span>
+              <div className="flex flex-wrap gap-3">
+                <div className="flex items-center text-gray-700 text-sm">
+                  <Award className="w-5 h-5 mr-2 text-primary" />
+                  <span>BBB A+ Rated</span>
                 </div>
-                <div className="flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
-                  <Shield className="w-5 h-5 mr-2" />
-                  <span className="text-sm font-semibold">Verified Reviews</span>
+                <div className="flex items-center text-gray-700 text-sm">
+                  <Shield className="w-5 h-5 mr-2 text-primary" />
+                  <span>Verified Reviews</span>
                 </div>
-                <div className="flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
-                  <Users className="w-5 h-5 mr-2" />
-                  <span className="text-sm font-semibold">150K+ Families</span>
+                <div className="flex items-center text-gray-700 text-sm">
+                  <Users className="w-5 h-5 mr-2 text-primary" />
+                  <span>150K+ Families</span>
                 </div>
               </div>
             </div>

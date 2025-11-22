@@ -32,7 +32,7 @@ export default function PhoenixCostBreakdown({ cityData }: PhoenixCostBreakdownP
   }
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 bg-cream">
       <div className="max-w-6xl mx-auto px-4">
         {/* Main Heading */}
         <div className="text-center mb-12">
@@ -45,7 +45,7 @@ export default function PhoenixCostBreakdown({ cityData }: PhoenixCostBreakdownP
         </div>
 
         {/* National Comparison */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-12">
+        <div className="bg-green-50 border border-green-200 rounded-lg p-8 mb-12 shadow-sm">
           <div className="grid md:grid-cols-3 gap-8 items-center">
             <div className="text-center">
               <div className="text-sm font-semibold text-gray-600 mb-2">PHOENIX AVERAGE</div>
@@ -82,7 +82,7 @@ export default function PhoenixCostBreakdown({ cityData }: PhoenixCostBreakdownP
         </div>
 
         {/* Detailed Cost Table */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden mb-12">
           <div className="bg-primary text-white px-6 py-4">
             <h3 className="text-xl font-bold flex items-center">
               <DollarSign className="w-6 h-6 mr-2" />
@@ -195,7 +195,7 @@ export default function PhoenixCostBreakdown({ cityData }: PhoenixCostBreakdownP
 
         {/* Additional Costs Section */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-md p-6 border-2 border-gray-200">
+          <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
             <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
               <CheckCircle className="w-6 h-6 text-green-600 mr-2" />
               Typically Included in Base Rate
@@ -236,7 +236,7 @@ export default function PhoenixCostBreakdown({ cityData }: PhoenixCostBreakdownP
             </ul>
           </div>
 
-          <div className="bg-orange-50 rounded-xl shadow-md p-6 border-2 border-orange-200">
+          <div className="bg-orange-50 rounded-lg shadow-sm p-6 border border-orange-200">
             <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
               <AlertCircle className="w-6 h-6 text-orange-600 mr-2" />
               Potential Additional Costs
@@ -279,9 +279,9 @@ export default function PhoenixCostBreakdown({ cityData }: PhoenixCostBreakdownP
         </div>
 
         {/* Payment Options */}
-        <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-8 mb-12">
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-            <CreditCard className="w-7 h-7 text-blue-600 mr-3" />
+            <CreditCard className="w-7 h-7 text-primary mr-3" />
             How to Pay for Assisted Living in Phoenix
           </h3>
 
@@ -339,17 +339,17 @@ export default function PhoenixCostBreakdown({ cityData }: PhoenixCostBreakdownP
         </div>
 
         {/* Download Guide CTA */}
-        <div className="bg-gradient-to-r from-primary to-primary-dark text-white rounded-2xl p-8 text-center">
+        <div className="bg-primary text-white rounded-lg p-8 text-center shadow-sm">
           <Download className="w-16 h-16 mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-3">Download Our Free Phoenix Cost Guide</h3>
-          <p className="text-primary-light mb-6 max-w-2xl mx-auto">
+          <p className="mb-6 max-w-2xl mx-auto opacity-90">
             Get our comprehensive 24-page guide including facility-by-facility pricing, hidden cost checklist, financial planning worksheet, and Medicaid application guide.
           </p>
-          <button className="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-light hover:text-primary-dark transition-all inline-flex items-center">
+          <button className="bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all inline-flex items-center">
             <Download className="w-5 h-5 mr-2" />
             Download Free Cost Guide (PDF)
           </button>
-          <p className="text-sm text-primary-light mt-4">
+          <p className="text-sm mt-4 opacity-75">
             Instant download • No credit card required • Updated January 2025
           </p>
         </div>

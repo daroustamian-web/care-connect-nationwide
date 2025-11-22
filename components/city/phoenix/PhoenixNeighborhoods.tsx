@@ -83,29 +83,6 @@ export default function PhoenixNeighborhoods({ cityData }: PhoenixNeighborhoodsP
     }
   ]
 
-  const getColorClasses = (color: string) => {
-    const colors: Record<string, string> = {
-      purple: 'from-purple-50 to-pink-50 border-purple-200',
-      green: 'from-green-50 to-emerald-50 border-green-200',
-      blue: 'from-blue-50 to-cyan-50 border-blue-200',
-      orange: 'from-orange-50 to-amber-50 border-orange-200',
-      indigo: 'from-indigo-50 to-purple-50 border-indigo-200',
-      red: 'from-red-50 to-pink-50 border-red-200'
-    }
-    return colors[color] || colors.blue
-  }
-
-  const getIconColor = (color: string) => {
-    const colors: Record<string, string> = {
-      purple: 'text-purple-600',
-      green: 'text-green-600',
-      blue: 'text-blue-600',
-      orange: 'text-orange-600',
-      indigo: 'text-indigo-600',
-      red: 'text-red-600'
-    }
-    return colors[color] || colors.blue
-  }
 
   return (
     <section className="py-16">
@@ -123,11 +100,12 @@ export default function PhoenixNeighborhoods({ cityData }: PhoenixNeighborhoodsP
         <div className="space-y-8">
           {neighborhoods.map((neighborhood, index) => {
             const Icon = neighborhood.icon
+            const bgColor = index % 2 === 0 ? 'bg-white' : 'bg-cream'
             return (
-              <div key={index} className={`bg-gradient-to-br ${getColorClasses(neighborhood.color)} border-2 rounded-xl p-8`}>
+              <div key={index} className={`${bgColor} border border-gray-200 rounded-lg p-8 shadow-sm`}>
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center">
-                    <Icon className={`w-10 h-10 ${getIconColor(neighborhood.color)} mr-4`} />
+                    <Icon className="w-10 h-10 text-primary mr-4" />
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900">{neighborhood.name}</h3>
                       <div className="flex items-center gap-4 mt-1 text-sm text-gray-600">
@@ -188,7 +166,7 @@ export default function PhoenixNeighborhoods({ cityData }: PhoenixNeighborhoodsP
         </div>
 
         {/* Comparison Table */}
-        <div className="mt-12 bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="mt-12 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
           <div className="bg-primary text-white px-6 py-4">
             <h3 className="text-xl font-bold">Quick Comparison: Phoenix Area Neighborhoods</h3>
           </div>
@@ -245,9 +223,9 @@ export default function PhoenixNeighborhoods({ cityData }: PhoenixNeighborhoodsP
         </div>
 
         {/* Pro Tip Box */}
-        <div className="mt-8 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl">
+        <div className="mt-8 bg-blue-50 border-l-4 border-primary p-6 rounded-r-lg">
           <div className="flex items-start">
-            <Heart className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+            <Heart className="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-1" />
             <div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">Expert Tip: Choosing the Right Neighborhood</h4>
               <p className="text-gray-700 mb-3">
