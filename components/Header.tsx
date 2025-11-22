@@ -15,23 +15,23 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-gray-900">
+            <span className="text-xl font-bold text-gray-900">
               Care<span className="text-primary">Connect</span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-primary transition-colors text-sm font-medium"
+                className="text-gray-600 hover:text-primary transition-colors text-sm"
               >
                 {link.name}
               </Link>
@@ -41,7 +41,7 @@ export default function Header() {
           {/* Call Button */}
           <a
             href="tel:8005552273"
-            className="hidden lg:flex items-center bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition-colors"
+            className="hidden lg:flex items-center text-primary hover:text-primary-dark font-semibold transition-colors text-sm"
           >
             <Phone className="w-4 h-4 mr-2" />
             (800) 555-CARE
@@ -53,7 +53,7 @@ export default function Header() {
             className="lg:hidden text-gray-900 hover:text-primary transition-colors"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 

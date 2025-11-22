@@ -10,12 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#7C3AED',
-          light: '#EDE9FE',
-          dark: '#6D28D9',
+          DEFAULT: '#4A5FE1',
+          light: '#E8EFFE',
+          dark: '#3849C2',
         },
-        cream: '#F5F3F0',
-        beige: '#F5F3F0',
+        navy: {
+          DEFAULT: '#1B2B4F',
+          dark: '#0F1A32',
+        },
+        cream: '#FDF9F5',
+        beige: '#F5F1ED',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
